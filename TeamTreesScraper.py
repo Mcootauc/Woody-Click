@@ -12,6 +12,8 @@ app = firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
+TTLog = db.collection(u'TTLog')
+
 
 url = "https://teamtrees.org/"
 
@@ -22,16 +24,15 @@ parsed = BeautifulSoup(response.text, "html.parser")
 donos = parsed.find(class_="max-w-screen-sm w-full mx-auto")
 
 donoList = []
-for dono in donos.find_all(class_="w-full bg-white shadow rounded-md relative mt-4 flex flex-row", limit=2):
+for dono in donos.find_all(class_="w-full bg-white shadow rounded-md relative mt-4 flex flex-row", limit=10):
     donoDic = {}
 
     #appends the username
-    donoDic['user'] = dono.find(class_="text-spruce font-black text-lg").get_text()
+    donoDic[u'user'] = dono.find(class_="text-spruce font-black text-lg").get_text()
     #appends the number of trees
-    donoDic['trees'] = (dono.find(class_="mt-0 md:mt-4 bg-lightMoss rounded-full text-white text-bold px-4 relative badge").get_text().split(" ")[0])
+    donoDic[u'trees'] = (dono.find(class_="mt-0 md:mt-4 bg-lightMoss rounded-full text-white text-bold px-4 relative badge").get_text().split(" ")[0])
     #appends the timestamp
-    donoDic['timestamp'] = (dono.find(class_="text-center text-xs mt-2 opacity-50 feed-datetime").get_text())
+    donoDic[u'timestamp'] = (dono.find(class_="text-center text-xs mt-2 opacity-50 feed-datetime").get_text())
 
     donoList.append(donoDic)
 
-print(donoList)
