@@ -1,6 +1,17 @@
 import requests 
 import time
 from bs4 import BeautifulSoup
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+
+# Use a service account.
+cred = credentials.Certificate('./tree-clicker-c0637cfebe46.json')
+
+app = firebase_admin.initialize_app(cred)
+
+db = firestore.client()
+
 
 url = "https://teamtrees.org/"
 
@@ -21,4 +32,3 @@ for dono in donos.find_all(class_="w-full bg-white shadow rounded-md relative mt
     #adds the dono name with the number of trees and timestamp to the dictionary
     donoDic[dono.find(class_="text-spruce font-black text-lg").get_text()] = treeTimestamp
 
-print(donoDic)
