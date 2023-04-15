@@ -19,8 +19,8 @@ for dono in donos.find_all(class_="w-full bg-white shadow rounded-md relative mt
         first = False
         continue
     treeTimestamp = []
-
-    print(dono.find(class_="text-spruce font-black text-lg"))
+    treeTimestamp.append(dono.find(class_="mt-0 md:mt-4 bg-lightMoss rounded-full text-white text-bold px-4 relative badge").get_text().split(" ")[0])
+    treeTimestamp.append(dono.find(class_="text-center text-xs mt-2 opacity-50 feed-datetime").get_text())
 
     donoDic[dono.find(class_="text-spruce font-black text-lg").get_text()] = treeTimestamp
 
