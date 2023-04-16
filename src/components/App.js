@@ -9,6 +9,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { query, where } from "firebase/firestore"; 
 import { collection, getDocs, updateDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig"
+import { auth } from "../firebaseConfig"
 
 export default function App() {
   const [articles, setArticles] = useState([])
@@ -44,7 +45,7 @@ setInterval(function () {
 }, 1000);
 
 setInterval(async function () {
-  const q = query(TTLogRef, where("user", "==", user), where("paid", "==", false));
+  const q = query(TTLogRef, where("user", "==", auth.currentUser.displayName), where("paid", "==", false));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach(async (document) => {
   // doc.data() is never undefined for query doc snapshots
@@ -57,10 +58,11 @@ setInterval(async function () {
     })
   }
 });
-}, 10000);
+}, 1000);
 
 function donate() {
   i *= 20;
+  console.log(i);
   j += 1000;
   updateCosts();
   updateTreeCounters();
