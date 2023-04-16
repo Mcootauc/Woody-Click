@@ -44,7 +44,7 @@ setInterval(function () {
 }, 1000);
 
 setInterval(async function () {
-  const q = query(TTLogRef, where("user", "==", "Mitchell Cootauco"), where("paid", "==", false));
+  const q = query(TTLogRef, where("user", "==", user), where("paid", "==", false));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach(async (document) => {
   // doc.data() is never undefined for query doc snapshots
