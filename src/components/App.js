@@ -49,28 +49,19 @@ setInterval(async function () {
   querySnapshot.forEach(async (document) => {
   // doc.data() is never undefined for query doc snapshots
   console.log(document.id, " => ", document.data());
-  if (doc.exists) {
+  if (document.exists) {
+    donate();
     const toUpdate = doc(db, "TTLog", document.id);
-    updateDoc(toUpdate, {
+    await updateDoc(toUpdate, {
       paid: true
     })
-    console.log("test");
-    donate();
   }
 });
 }, 10000);
 
 function donate() {
-  stepForward1();
-  stepForward2();
-  stepForward1();
-  stepForward2();
-  stepForward1();
-  stepForward2();
-  stepForward1();
-  stepForward2();
-  stepForward1();
-  stepForward2();
+  i *= 20;
+  j += 1000;
   updateCosts();
   updateTreeCounters();
 }
