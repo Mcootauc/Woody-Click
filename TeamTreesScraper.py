@@ -14,7 +14,6 @@ db = firestore.client()
 
 TTLog = db.collection(u'TTLog')
 
-
 url = "https://teamtrees.org/"
 
 response = requests.get((url))
@@ -34,5 +33,13 @@ for dono in donos.find_all(class_="w-full bg-white shadow rounded-md relative mt
     #appends the timestamp
     donoDic[u'timestamp'] = (dono.find(class_="text-center text-xs mt-2 opacity-50 feed-datetime").get_text())
 
-    donoList.append(donoDic)
+    user = donoDic[u'user']
+    query = TTLog.where(u'user', u'==', user)
+    trees = donoDic[u'trees']
+    query = query.where(u'trees',u'==', trees)
+    timestamp = donoDic[u'timestamp']
+    query = query.where(u'timestamp',u'==',timestamp)
+    if len(query.get()) == 0:
+        TTLog.add(donoDic)
 
+    donoList.append(donoDic)
