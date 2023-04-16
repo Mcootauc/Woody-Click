@@ -34,11 +34,13 @@ for dono in donos.find_all(class_="w-full bg-white shadow rounded-md relative mt
     donoDic[u'timestamp'] = (dono.find(class_="text-center text-xs mt-2 opacity-50 feed-datetime").get_text())
 
     user = donoDic[u'user']
-    query = TTLog.where(u'user', u'==', user)
     trees = donoDic[u'trees']
-    query = query.where(u'trees',u'==', trees)
     timestamp = donoDic[u'timestamp']
+
+    query = TTLog.where(u'user', u'==', user)
+    query = query.where(u'trees',u'==', trees)
     query = query.where(u'timestamp',u'==',timestamp)
+    
     if len(query.get()) == 0:
         TTLog.add(donoDic)
 
