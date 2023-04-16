@@ -1,58 +1,95 @@
-.App {
-  display: grid;
-  grid-template-rows: min-content auto;
-  grid-template-columns: 250px auto;
-  height: 100vh;
-  overflow: scroll;
-}
 
-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: black;
-  color: white;
-  grid-column: 1 / span 2;
-  padding: 10px 5px;
-}
-
-form {
-  padding: 10px;
+body {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  height: 100vh;
+  background-image: linear-gradient(rgb(184, 233, 203), rgb(164, 187, 181));
+  align-items: center;
+  margin: 0;
+  font-family: "DynaPuff", cursive;
+}
+h1 {
+  background-color: rgb(21, 65, 31);
+  color: white;
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#clickme {
+  width: 250px;
+  align-items: center;
+  margin: 10px;
+  padding-bottom: 5px;
+  width: 18%;
+  transition: width 0.2s;
+  -webkit-transition: width 0.2s;
+}
+#clickme {
+  width: 18.4%;
+}
+#cookie {
+  margin: 25px;
+}
+h2 {
+  text-align: center;
+  padding-top: 30%;
+}
+table {
+  border: 1px solid;
+  background-color: darkcyan;
+  position: absolute;
+  bottom: 0px;
+  width: 34%;
+  text-align: center;
+  border-radius: 10px;
+}
+td {
+  background-color: lightcyan;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px;
 }
 
-form input,
-form textarea {
-  margin-bottom: 10px;
-  width: 300px;
+#box {
+  background-color: rgb(184, 233, 203);
+  border-radius: 25px;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  margin-top: 380px;
+  padding: 12px;
 }
-
-nav,
-article {
-  height: 100%;
+button {
+  padding: 7px;
+  margin: 4px;
+  border-radius: 12px;
+  background-color: antiquewhite;
+  border-color: brown;
+  font-family: "DynaPuff", cursive;
+}
+#micro1 {
   padding: 10px;
+  position: absolute;
+  margin-top: 39%;
 }
-
-nav {
-  background-color: #dee9ff;
+#info {
+  position: absolute;
+  margin-top: 42%;
 }
-
-nav p:hover {
-  text-decoration: underline;
-  cursor: pointer;
+#cat {
+  position: absolute;
+  margin-top: 22.4%;
+  margin-right: 6.6%;
 }
-
-article .date {
-  font-style: italic;
+#cat1 {
+  position: absolute;
+  margin-top: 22.9%;
+  margin-left: 6.6%;
 }
-
-article .body {
-  white-space: break-spaces;
-}
-
-.error {
-  background-color: red;
-  color: gold;
-  padding: 5px;
+#cat2 {
+  position: absolute;
+  margin-top: 20%;
+  margin-right: 20%;
 }
