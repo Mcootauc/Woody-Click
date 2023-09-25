@@ -1,22 +1,34 @@
-# LMUHacks 2023
-By Lawrence Benitez, Owen Hunger, Aiden McDougald, and Mitchell Cootauco
-
 # Woody Click
-We are creating a semi-idle game about planting trees.  Users can donate to plant trees in real life to receive bonuses that allow them to plant more trees in game.
+A web application inspired by the game Cookie Clicker. Your task is simple, click on a tree to amass the highest score! As you progress through the game, your point-earning potential will plateau. By donating to the Team Trees initiative through the WoodyClick website, you can break free from the plateau.
+![woodyclick homepage](https://github.com/Mcootauc/Woody-Click/assets/73667103/10e49dd9-a620-4d92-8405-30c7590b0dfe)
+
+## 🔗 Developers
+- Backend Developer: [@Mitchell Cootauco](https://github.com/Mcootauc)
+- Backend Developer: [@Aiden McDougald](https://github.com/aidmc44)
+- Frontend Developer: [@Lawrence Benitez](https://github.com/Law47)
+- Frontend Developer: [@Owen Hunger](https://github.com/ohunger)
+
+### Front-End:
+![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+## Back-End:
+![Python](https://img.shields.io/badge/-Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
+## Database:
+![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
 
 
-- A game where you click on a tree to get points 
-  - Objective: Try to get the most points to be #1 on the leaderboard
-- Related to the climate change goal:
-  - Once you get to a certain point your point generation will plateau 
-  - Donations to Team Trees help you “skip levels”
-  - The incentives to donate are to help the environment and to be #1 on the leaderboard
-- Additional Features:
-  - You can create an account using a username and password
-  - Stores the usernames, the number of trees, and the timestamp of the donation to our google firebase.
-- Problems we had to figure out:
-  - We had to figure out the in-game currency 
-  - How to scrape the website
-  - Store the usernames, the number of trees, and the timestamp of the donation to our google firebase.
-  - How to repeatedly check the website for new donations  after a set amount of time passes
-   - Also adding new donation data while avoiding duplicates
+# How to setup
+CD into WoodyClick, and run the following command in the terminal.
+
+`npm install`
+
+## To launch the app
+Run the following command into the terminal.
+
+`npm start`
+
+Once the node_modules folder has been created you can run "npm run dev" anytime to launch the app.
