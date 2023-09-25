@@ -22,7 +22,7 @@ A web application inspired by the game Cookie Clicker. Your task is simple, clic
 
 
 # How to setup
-CD into WoodyClick, and run the following command in the terminal.
+CD into the Woody-Click folder, and run the following command in the terminal.
 
 `npm install`
 
@@ -31,4 +31,4 @@ Run the following command into the terminal.
 
 `npm start`
 
-Once the node_modules folder has been created you can run "npm run dev" anytime to launch the app.
+Once the node_modules folder has been created you can run "npm start" anytime to launch the app.
