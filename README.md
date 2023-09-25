@@ -1,5 +1,5 @@
 # Woody Click
-A web application inspired by the game Cookie Clicker. Your task is simple, click on a tree to amass the highest score! As you progress through the game, your point-earning potential will plateau. By donating to the Team Trees initiative through the WoodyClick website, you can break free from the plateau.
+This is Woody Click. A web application inspired by the game Cookie Clicker. Your task is simple, click on a tree to amass the highest score! As you progress through the game, your point-earning potential will plateau. By donating to the Team Trees initiative through the WoodyClick website, you can break free from the plateau.
 
 ![woodyclick homepage](https://github.com/Mcootauc/Woody-Click/assets/73667103/10e49dd9-a620-4d92-8405-30c7590b0dfe)
 
